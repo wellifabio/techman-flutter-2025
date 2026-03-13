@@ -41,3 +41,14 @@ flutter run
 |![Screenshot 03](./assets/screenshot03.png)|
 
 - Caro deseje instalar a versão de testes no seu celular Android, hebilite a opção de desenvolvedor e baixe o [apk](./app-release.apk) de testes, por sua conta e risco. Não me resposabilizo por danos causados ao seu aparelho de celular android.
+
+## Informações
+Antes de gerar o .apk com o comando:
+```bash
+flutter build apk --release
+```
+Acrescente a linha de comando a seguir
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+no arquivo ./android/app/src/main/AndroidManifest.xml para que as permissões de internet sejam habilitadas a API responda.
